@@ -30,6 +30,10 @@ $(call soong_config_set,qtidisplay,pxlw_vendor_namespace,vendor/oneplus/astonc)
 $(call soong_config_set_bool,surfaceflinger,supports_oplus_adfr,true)
 $(call soong_config_set_bool,qtidisplay,pxlw_hw_iris7,true)
 
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    OPlusExtras
+
 # IR
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.consumerir.xml
@@ -44,9 +48,6 @@ $(call soong_config_set_bool,qtidisplay,oplus_udfps,true)
 # LiveDisplay
 $(call soong_config_set_bool,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_AF,true)
 $(call soong_config_set_bool,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_SE,false)
-
-# OplusParts
-$(call inherit-product, packages/apps/OplusParts/oplusparts.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \

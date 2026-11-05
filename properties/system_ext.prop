@@ -1,2 +1,5 @@
 # IFAA
 sys.oplus.ifaa.model=ONEPLUS-R23801
+
+# MEMC
+persist.sys.display.iris.auto_memc=0
