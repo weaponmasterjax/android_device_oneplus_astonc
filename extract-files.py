@@ -26,6 +26,7 @@ namespace_imports = [
     'hardware/pixelworks/interfaces',
     'hardware/qcom-caf/sm8550',
     'vendor/oneplus/sm8550-common',
+    'vendor/oplus/camera',
     'vendor/qcom/opensource/display',
     'vendor/qcom/opensource/commonsys-intf/display',
 ]
@@ -49,6 +50,14 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('<speaker_protection_enabled>1</speaker_protection_enabled>', '<speaker_protection_enabled>0</speaker_protection_enabled>'),
     'odm/lib64/libAlgoProcess.so': blob_fixup()
         .replace_needed('android.hardware.graphics.common-V3-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
+    (
+        'odm/lib64/libEIS.so',
+        'odm/lib64/libHIS.so',
+        'odm/lib64/libsharebuffer_impl.so',
+        'odm/lib64/hw/camera.oemlayer.so',
+        'odm/lib64/camera/components/com.oplus.node.sstabphoto.so',
+    ): blob_fixup()
+        .replace_needed('libui.so', 'libui_oplus.so'),
     (
         'odm/lib64/libCOppLceTonemapAPI.so',
         'odm/lib64/libSuperRaw.so',
