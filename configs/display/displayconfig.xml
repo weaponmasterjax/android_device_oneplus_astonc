@@ -113,4 +113,18 @@
             <point><sdrNits>1594.0570</sdrNits><hdrRatio>1.0037</hdrRatio></point>
         </sdrHdrRatioMap>
     </highBrightnessMode>
+
+    <hdrBrightnessConfig>
+        <brightnessMap>
+            <point>
+                <first>100000</first>
+                <second>1.0</second>
+            </point>
+        </brightnessMap>
+        <brightnessIncreaseDebounceMillis>4000</brightnessIncreaseDebounceMillis>
+        <brightnessDecreaseDebounceMillis>4000</brightnessDecreaseDebounceMillis>
+        <screenBrightnessRampIncrease>0.05</screenBrightnessRampIncrease>
+        <screenBrightnessRampDecrease>0.05</screenBrightnessRampDecrease>
+        <allowInLowPowerMode>false</allowInLowPowerMode>
+    </hdrBrightnessConfig>
 </displayConfiguration>
