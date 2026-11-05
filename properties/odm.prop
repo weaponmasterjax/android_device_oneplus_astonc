@@ -5,4 +5,5 @@ ro.product.odm.name=PJE110
 ro.vendor.oplus.regionmark=CN
 
 # Display
-persist.vendor.display.pxlw.iris_feature=0x407f0780
+# Pixelworks Iris 7P packed chip capability.
+persist.vendor.display.pxlw.iris_feature=0x83770780
