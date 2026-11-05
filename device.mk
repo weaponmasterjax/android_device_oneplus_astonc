@@ -19,6 +19,11 @@ TARGET_SCREEN_WIDTH := 1264
 # OPlus Camera (global 12R stack)
 $(call inherit-product-if-exists, vendor/oplus/camera/camera-vendor.mk)
 
+# SR model stock .bin aliases
+PRODUCT_PACKAGES += \
+    sr_models.bin_symlink \
+    sr_ref_models.bin_symlink
+
 # Display
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946607878435459.xml
