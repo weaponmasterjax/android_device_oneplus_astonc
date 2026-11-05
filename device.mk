@@ -16,8 +16,8 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 2780
 TARGET_SCREEN_WIDTH := 1264
 
-# Camera
-$(call inherit-product, vendor/oplus/camera/astonc/opluscamera.mk)
+# OPlus Camera (global 12R stack)
+$(call inherit-product-if-exists, vendor/oplus/camera/camera-vendor.mk)
 
 # Display
 PRODUCT_COPY_FILES += \
